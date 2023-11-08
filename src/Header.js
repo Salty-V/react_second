@@ -1,12 +1,12 @@
 function Header() {
 
     const isUserLogged = true;
-    const itemsInCart = 12;
+    const itemsInCart = 12 ;
 
     const userLogged = {
         firstName : "Camille",
         lastName : "Blanchy",
-        job : "aspiring web dev",
+        job : "dev",
     };
 
 
@@ -15,7 +15,7 @@ function Header() {
             <nav>
                 <ul>
                     {isUserLogged ? (
-                    <li>
+                    <li class="first">
                         {userLogged.firstName} {userLogged.lastName} - {userLogged.job}
                     </li>
                     ) : ( 
@@ -26,7 +26,7 @@ function Header() {
                     <li>ST</li>
                     <li>Racing</li>
 
-                    {itemsInCart > 0 ? <li>Cart : {itemsInCart}</li> : <li>Panier vide</li>}
+                    {itemsInCart > 0 ? <li>Cart : {itemsInCart}</li> : <li>Your cart is empty</li>}
                 </ul>
             </nav>
         </header>

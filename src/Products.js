@@ -10,7 +10,7 @@ function Products() {
         price : 333 + "€",
         isPublished : true, },
 
-    {   title : "Pass tu passes pas",
+    {   title : "Pass qui dépasse",
         price : 2200 + "€",
         isPublished : true, }]
 
@@ -18,15 +18,19 @@ function Products() {
     <main>
        {passAvailable.map((product) => {
             return (
-            <article>
-                <h3>{product.title}</h3>
-                <h3>{product.price}</h3>
-
-            </article>
+            <>
+                {product.isPublished ? (
+                    <article>
+                        <h3>{product.title}</h3>
+                        <p>{product.price}</p>
+                    </article>
+                ) : (
+                    <p>Ces places ne sont pas encore disponibles</p>
+                )}
+            </> 
             );
-       })}
+                })}
     </main>
-);
-}
+   )};
 
 export default Products;
