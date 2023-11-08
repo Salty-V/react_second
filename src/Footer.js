@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <footer>
-            <h2>La goffa Lolitaaaa vous remercie</h2>
+            <h2>Cette année on passe les demis</h2>
         </footer>
     );
 }
