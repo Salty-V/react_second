@@ -1,21 +1,37 @@
 function Header() {
 
-    const isUserLogged = false;
+    const isUserLogged = true;
+    const itemsInCart = 12;
+
+    const userLogged = {
+        firstName : "Camille",
+        lastName : "Blanchy",
+        job : "aspiring web dev",
+    };
+
 
     return (
         <header>
             <nav>
                 <ul>
-                    <li>Mais c'est qui? C'était</li>
-                    <li>Loli</li>
-                    <li>Lolo</li>
-                    <li>Lola</li>
+                    {isUserLogged ? (
+                    <li>
+                        {userLogged.firstName} {userLogged.lastName} - {userLogged.job}
+                    </li>
+                    ) : ( 
+                    <li>Veuillez vous connecter</li>
+)}
+                    <li>UBB</li>
+                    <li>ASM</li>
+                    <li>ST</li>
+                    <li>Racing</li>
 
-                    {isUserLogged ? <li>Camille Blanchy</li> : <li>Veuillez vous connecter</li>}
+                    {itemsInCart > 0 ? <li>Cart : {itemsInCart}</li> : <li>Panier vide</li>}
                 </ul>
             </nav>
         </header>
 );
 }
+
 
 export default Header;
