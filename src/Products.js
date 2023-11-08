@@ -3,15 +3,15 @@ function Products() {
     const passAvailable = 
    
     [{  title : "Pass Annuel TOP14 Standard",
-        price : "650€",
+        price : 650 + "€",
         isPublished : true, },
 
     {   title : "Pass jeunes passionnés",
-        price : "333€",
+        price : 333 + "€",
         isPublished : true, },
 
     {   title : "Pass tu passes pas",
-        price : "2200€",
+        price : 2200 + "€",
         isPublished : true, }]
 
     return (
@@ -20,6 +20,8 @@ function Products() {
             return (
             <article>
                 <h3>{product.title}</h3>
+                <h3>{product.price}</h3>
+
             </article>
             );
        })}
