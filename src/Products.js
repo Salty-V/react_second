@@ -1,7 +1,7 @@
 function Products() {
 
     return (
-    <div>
+    <main>
         <article>
             <h3>Pass Annuel TOP14 Standard</h3>
             <p>650€</p>
@@ -17,7 +17,7 @@ function Products() {
             <h4>Petits fours ou pinte il faut trancher </h4>
             <p>2200€</p>
         </article>
-    </div>
+    </main>
 );
 }
 
